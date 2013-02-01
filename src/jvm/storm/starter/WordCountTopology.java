@@ -14,6 +14,8 @@ import backtype.storm.topology.base.BaseBasicBolt;
 import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Tuple;
 import backtype.storm.tuple.Values;
+import backtype.storm.utils.Utils;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -82,8 +84,8 @@ public class WordCountTopology {
             LocalCluster cluster = new LocalCluster();
             cluster.submitTopology("word-count", conf, builder.createTopology());
         
-            Thread.sleep(10000);
-
+            Utils.sleep(10000);
+            
             cluster.shutdown();
         }
     }
