@@ -7,3 +7,4 @@ lib/
 .lein-deps-sum
 target/
 .settings/
+output/
